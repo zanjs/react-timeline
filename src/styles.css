@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.timeline {
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: #44465c;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item::after {
+  z-index: 100;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -13px;
+  width: 25px;
+  height: 25px;
+  background: #232535;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -12px;
+}
+
+.left::before {
+  content: '';
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  border: 10px solid #232535;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #232535;
+  transform: translateY(-50%);
+}
+
+.right::before {
+  content: '';
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  border: 10px solid #232535;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #232535 transparent transparent;
+  transform: translateY(-50%);
+}
+
+.timeline-item-body {
+  padding: 20px;
+  background: #232535;
+  border-radius: 6px;
+  color: white;
+}
+
+.timeline-item-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.timeline-item-header p {
+  color: #848892;
+  font-weight: bold;
+}
+
+.timeline-item-header h4 {
+  color: white;
+  background-color: #44465c;
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item::before {
+    left: 60px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #232535 transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+    left: 19px;
+    z-index: 100;
+  }
+
+  .right {
+    left: 0;
+  }
+}
