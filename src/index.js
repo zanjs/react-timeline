@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 export const TimelineItem = ({ title, date, body, side }) => {
   return (
-    <div class={'timeline-item ' + side}>
-      <div class='timeline-item-body'>
-        <div class='timeline-item-header'>
+    <div className={'timeline-item ' + side}>
+      <div className='timeline-item-body'>
+        <div className='timeline-item-header'>
           <p>{date}</p>
           <h4>{title}</h4>
         </div>
