@@ -2,13 +2,22 @@ import React from 'react';
 import './styles.css';
 import PropTypes from "prop-types";
 
-export const TimelineItem = ({ title, date, body, side }) => {
+export const TimelineItem = ({ title, date, body, side, bgColor }) => {
+
+  let stylt = {}
+
+  if (bgColor) {
+    stylt = bgColor
+  }
+
   return (
     <div className={'timeline-item ' + side}>
-      <div className='timeline-item-body'>
+      <div className='timeline-item-body' style={stylt}>
         <div className='timeline-item-header'>
           <p>{date}</p>
-          <h4>{title}</h4>
+          {
+            title ?  <h4>{title}</h4> : ""
+          }
         </div>
         {body}
       </div>
