@@ -83,7 +83,7 @@
   padding: 20px;
   background: #eee;
   border-radius: 6px;
-  color: white;
+  color: #333;
 }
 
 .timeline-item-header {
@@ -92,7 +92,7 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 20px;
-  color: white;
+  color: #333;
 }
 
 .timeline-item-header p {
